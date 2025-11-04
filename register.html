@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/form.css" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -37,10 +37,149 @@
       <h1>INDBERET</h1>
       <section id="form-section">
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h2>Registrer nødsituation</h2>
+          <p>
+            Udfyld formularen så præcist som muligt. Oplysningerne deles kun med
+            beredskabet.
+          </p>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          <fieldset>
+            <legend>Person & kontakt</legend>
+
+            <label for="name">Navn</label>
+            <input id="name" name="name" type="text" required />
+
+            <label for="phone">Telefon</label>
+            <input id="phone" name="phone" type="tel" required />
+
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" />
+
+            <fieldset>
+              <legend>Jeg indberetter for</legend>
+              <label>
+                <input type="radio" name="report_for" value="migselv" checked />
+                Mig selv
+              </label>
+              <label>
+                <input type="radio" name="report_for" value="andre" />
+                En anden person/gruppe
+              </label>
+            </fieldset>
+          </fieldset>
+
+          <!-- 2) Sted & tid -->
+          <fieldset>
+            <legend>Sted & tid</legend>
+
+            <label for="address">Adresse / nærmeste stednavn</label>
+            <input id="address" name="address" type="text" required />
+
+            <label for="city">Postnr / by</label>
+            <input id="city" name="city" type="text" required />
+
+            <label for="date">Dato</label>
+            <input id="date" name="date" type="date" required />
+
+            <label for="time">Tidspunkt</label>
+            <input id="time" name="time" type="time" required />
+          </fieldset>
+
+          <!-- 3) Situation -->
+          <fieldset>
+            <legend>Situation</legend>
+
+            <fieldset>
+              <legend>Akut status</legend>
+              <label>
+                <input type="radio" name="status" value="livsfare" required />
+                Livsfare
+              </label>
+              <label>
+                <input type="radio" name="status" value="stabil_alvorlig" />
+                Alvorlig men stabil
+              </label>
+              <label>
+                <input type="radio" name="status" value="sikker" />
+                Sikker – behøver evakuering
+              </label>
+            </fieldset>
+
+            <label for="people">Antal personer</label>
+            <input
+              id="people"
+              name="people"
+              type="number"
+              min="1"
+              step="1"
+              required
+            />
+
+            <label for="vand">Vandstand</label>
+            <select id="vand" name="vand" required>
+              <option value="vandlevel" selected disabled>
+                Vælg vandstand
+              </option>
+              <option>Ingen vand</option>
+              <option>Under knæ</option>
+              <option>Under hofte</option>
+              <option>Over hofte</option>
+              <option>Over hovedhøjde</option>
+            </select>
+
+            <fieldset>
+              <legend>Behov nu</legend>
+              <label>
+                <input type="checkbox" name="behov" value="medicinskhjælp" />
+                Medicinsk hjælp
+              </label>
+              <label>
+                <input type="checkbox" name="behov" value="evakuering" />
+                Evakuering
+              </label>
+              <label>
+                <input type="checkbox" name="behov" value="fødevare" />
+                Fødevarer/varme
+              </label>
+              <label>
+                <input type="checkbox" name="behov" value="dyr" /> Redning af
+                husdyr
+              </label>
+              <label>
+                <input type="checkbox" name="behov" value="andet" /> Andet
+              </label>
+            </fieldset>
+          </fieldset>
+
+          <!-- 4) Beskrivelse & bilag -->
+          <fieldset>
+            <legend>Beskrivelse & bilag</legend>
+
+            <label for="beskriv">Kort beskrivelse</label>
+            <textarea
+              id="beskriv"
+              name="beskrivelse"
+              rows="4"
+              required
+            ></textarea>
+
+            <label for="medie">Upload billede/video</label>
+            <input id="medie" name="medie" type="file" />
+          </fieldset>
+
+          <!-- 5) Samtykke & afsend -->
+          <fieldset>
+            <legend>Samtykke</legend>
+            <label>
+              <input type="checkbox" name="samtykke" required />
+              Jeg accepterer, at mine oplysninger deles med beredskabet i
+              nødsituationer.
+            </label>
+          </fieldset>
+
+          <button type="submit">Send</button>
+        </form>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
