@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/forms.css" />
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/fonts.css" />
@@ -11,7 +12,6 @@
     <link rel="stylesheet" href="css/layout.css" />
     <link rel="stylesheet" href="css/burger.css" />
     <link rel="stylesheet" href="css/cards.css" />
-    <link rel="stylesheet" href="css/forms.css" />
     <link rel="icon" type="image/png" href="img/fav.png" />
     <title>Emergency Site</title>
   </head>
@@ -22,7 +22,7 @@
           <a href="index.html"> LOGO-TYPE </a>
         </div>
         <ul class="menu">
-          <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
+          <li><a class="menuItem" href="instruction.html">Nærkontakt</a></li>
           <li><a class="menuItem" href="register.html">Indberet</a></li>
         </ul>
         <button class="burger">
@@ -35,6 +35,7 @@
 
     <main>
       <h1>INDBERET</h1>
+
       <section id="form-section">
         <article id="form-info">
           <h2>Registrer nødsituation</h2>
@@ -43,18 +44,23 @@
             beredskabet.
           </p>
         </article>
+
         <form id="webform">
+          <!-- 1) Person & kontakt -->
           <fieldset>
             <legend>Person & kontakt</legend>
 
-            <label for="name">Navn</label>
+            <label for="name" data-required="*">Navn</label>
             <input id="name" name="name" type="text" required />
+            <p class="error-message">Udfyld venligst dit navn</p>
 
-            <label for="phone">Telefon</label>
+            <label for="phone" data-required="*">Telefon</label>
             <input id="phone" name="phone" type="tel" required />
+            <p class="error-message">Indtast et gyldigt telefonnummer</p>
 
-            <label for="email">E-mail</label>
-            <input id="email" name="email" type="email" />
+            <label for="email" data-required="*">E-mail</label>
+            <input id="email" name="email" type="email" required />
+            <p class="error-message">Indtast en gyldig e-mailadresse</p>
 
             <fieldset>
               <legend>Jeg indberetter for</legend>
@@ -73,17 +79,23 @@
           <fieldset>
             <legend>Sted & tid</legend>
 
-            <label for="address">Adresse / nærmeste stednavn</label>
+            <label for="address" data-required="*"
+              >Adresse / nærmeste stednavn</label
+            >
             <input id="address" name="address" type="text" required />
+            <p class="error-message">Angiv adresse eller stednavn</p>
 
-            <label for="city">Postnr / by</label>
+            <label for="city" data-required="*">Postnr / by</label>
             <input id="city" name="city" type="text" required />
+            <p class="error-message">Angiv by eller postnummer</p>
 
-            <label for="date">Dato</label>
+            <label for="date" data-required="*">Dato</label>
             <input id="date" name="date" type="date" required />
+            <p class="error-message">Vælg en dato</p>
 
-            <label for="time">Tidspunkt</label>
+            <label for="time" data-required="*">Tidspunkt</label>
             <input id="time" name="time" type="time" required />
+            <p class="error-message">Vælg et tidspunkt</p>
           </fieldset>
 
           <!-- 3) Situation -->
@@ -104,9 +116,10 @@
                 <input type="radio" name="status" value="sikker" />
                 Sikker – behøver evakuering
               </label>
+              <p class="error-message">Vælg venligst en akut status</p>
             </fieldset>
 
-            <label for="people">Antal personer</label>
+            <label for="people" data-required="*">Antal personer</label>
             <input
               id="people"
               name="people"
@@ -115,54 +128,34 @@
               step="1"
               required
             />
+            <p class="error-message">Angiv antal personer (mindst 1)</p>
 
-            <label for="vand">Vandstand</label>
+            <label for="vand" data-required="*">Vandstand</label>
             <select id="vand" name="vand" required>
-              <option value="vandlevel" selected disabled>
-                Vælg vandstand
-              </option>
+              <option value="" selected disabled>Vælg vandstand</option>
               <option>Ingen vand</option>
               <option>Under knæ</option>
               <option>Under hofte</option>
               <option>Over hofte</option>
               <option>Over hovedhøjde</option>
             </select>
-
-            <fieldset>
-              <legend>Behov nu</legend>
-              <label>
-                <input type="checkbox" name="behov" value="medicinskhjælp" />
-                Medicinsk hjælp
-              </label>
-              <label>
-                <input type="checkbox" name="behov" value="evakuering" />
-                Evakuering
-              </label>
-              <label>
-                <input type="checkbox" name="behov" value="fødevare" />
-                Fødevarer/varme
-              </label>
-              <label>
-                <input type="checkbox" name="behov" value="dyr" /> Redning af
-                husdyr
-              </label>
-              <label>
-                <input type="checkbox" name="behov" value="andet" /> Andet
-              </label>
-            </fieldset>
+            <p class="error-message">Vælg vandstand</p>
           </fieldset>
 
           <!-- 4) Beskrivelse & bilag -->
           <fieldset>
             <legend>Beskrivelse & bilag</legend>
 
-            <label for="beskriv">Kort beskrivelse</label>
+            <label for="beskriv" data-required="*">Kort beskrivelse</label>
             <textarea
               id="beskriv"
               name="beskrivelse"
               rows="4"
               required
             ></textarea>
+            <p class="error-message">
+              Skriv en kort beskrivelse af situationen
+            </p>
 
             <label for="medie">Upload billede/video</label>
             <input id="medie" name="medie" type="file" />
@@ -171,23 +164,44 @@
           <!-- 5) Samtykke & afsend -->
           <fieldset>
             <legend>Samtykke</legend>
-            <label>
+            <label data-required="*">
               <input type="checkbox" name="samtykke" required />
               Jeg accepterer, at mine oplysninger deles med beredskabet i
               nødsituationer.
             </label>
+            <p class="error-message">Du skal acceptere før du kan sende</p>
           </fieldset>
 
           <button type="submit">Send</button>
         </form>
       </section>
+
       <section id="form-summary">
         <h2>Summary</h2>
         <article>
           <p class="placeholder">Opsummering</p>
+          <h3>Person & kontakt</h3>
+          <p>Navn:</p>
+          <p>Telefon:</p>
+          <p>Indberettet for:</p>
+
+          <h3>Sted & tid</h3>
+          <p>Adresse:</p>
+          <p>Postnr/by:</p>
+          <p>Dato:</p>
+          <p>Tidspunkt:</p>
+
+          <h3>Situation</h3>
+          <p>Akut status:</p>
+          <p>Antal personer:</p>
+          <p>Vandstand:</p>
+
+          <h3>Beskrivelse</h3>
+          <p>[Kort beskrivelse]</p>
         </article>
       </section>
     </main>
+
     <footer>
       <nav class="some">
         <ul>
@@ -214,7 +228,7 @@
         </ul>
       </nav>
     </footer>
+
     <script src="js/burger.js"></script>
-    <!-- <script src="js/main.js"></script> -->
   </body>
 </html>
