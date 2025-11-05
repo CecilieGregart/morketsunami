@@ -30,3 +30,100 @@
   margin: 0 0 1.2rem 0;
   padding: 0;
 }
+
+/* Grid layout – giver luft mellem felter */
+form fieldset {
+  display: grid;
+  gap: 0.9rem;
+  margin-bottom: 1.6rem;
+  padding: 1.3rem;
+  border: 1px solid #ffffff2e;
+  border-radius: 10px;
+  background-color: #193c5fa6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+/* overskrifter */
+form legend {
+  font-weight: 700;
+  color: #f0f7ff;
+  margin-bottom: 0.5rem;
+}
+
+/* Inputfelter */
+input,
+select,
+textarea {
+  background-color: #ffffff1a;
+  color: #ffffff;
+  border: 1px solid #ffffff40;
+  padding: 0.6rem;
+  border-radius: 6px;
+}
+
+/* Fokus – blå outline når man klikker */
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #2870a7;
+  outline-offset: 2px;
+  background-color: #ffffff00;
+}
+
+/* Når feltet er korrekt */
+input:user-valid,
+select:user-valid,
+textarea:user-valid {
+  border-color: #6ada97;
+  background-color: #4ea5e826;
+}
+
+/* Når feltet mangler eller er forkert */
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border-color: #e26d6d;
+  background-color: #e26d6d1f;
+}
+
+/* Fejlbesked – vises under ugyldige felter */
+.error-message {
+  color: #ffb3b3;
+  font-size: 0.8rem;
+  margin-top: -0.2rem;
+  margin-bottom: 0.35rem;
+  display: none;
+}
+
+/* Viser fejlbesked ved ugyldigt input */
+input:user-invalid + .error-message,
+select:user-invalid + .error-message,
+textarea:user-invalid + .error-message {
+  display: block;
+}
+
+/* stjerne ved required felter */
+label::after {
+  content: attr(data-required);
+  color: #ef8c8c;
+  margin-left: 3px;
+  font-weight: bold;
+}
+
+/* Knap */
+form button[type="submit"] {
+  align-self: flex-start;
+  background-color: #1e4478; /* mørk blå */
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button[type="submit"]:hover {
+  background-color: #3c8fe4;
+  transform: scale(1.03);
+}
