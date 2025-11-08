@@ -39,6 +39,7 @@
       <section id="form-section">
         <article id="form-info">
           <h2>Registrer nødsituation</h2>
+          <form aria-label="EK signup form"></form>
           <p>
             Udfyld formularen så præcist som muligt. Oplysningerne deles kun med
             beredskabet.
@@ -146,9 +147,9 @@
           <fieldset>
             <legend>Beskrivelse & bilag</legend>
 
-            <label for="beskriv" data-required="*">Kort beskrivelse</label>
+            <label for="beskrivelse" data-required="*">Kort beskrivelse</label>
             <textarea
-              id="beskriv"
+              id="beskrivelse"
               name="beskrivelse"
               rows="4"
               required
@@ -176,29 +177,14 @@
         </form>
       </section>
 
-      <section id="form-summary">
-        <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
-          <h3>Person & kontakt</h3>
-          <p>Navn:</p>
-          <p>Telefon:</p>
-          <p>Indberettet for:</p>
+      <section class="output">
+        <h2>Opsamling (output)</h2>
 
-          <h3>Sted & tid</h3>
-          <p>Adresse:</p>
-          <p>Postnr/by:</p>
-          <p>Dato:</p>
-          <p>Tidspunkt:</p>
-
-          <h3>Situation</h3>
-          <p>Akut status:</p>
-          <p>Antal personer:</p>
-          <p>Vandstand:</p>
-
-          <h3>Beskrivelse</h3>
-          <p>[Kort beskrivelse]</p>
-        </article>
+        <p>Navn: <span id="name_output"></span></p>
+        <p>Telefon: <span id="phone_output"></span></p>
+        <p>Email: <span id="email_output"></span></p>
+        <p>Adresse: <span id="address_output"></span></p>
+        <p>Vandstand: <span id="vand_output"></span></p>
       </section>
     </main>
 
@@ -230,5 +216,6 @@
     </footer>
 
     <script src="js/burger.js"></script>
+    <script src="js/form.js"></script>
   </body>
 </html>
