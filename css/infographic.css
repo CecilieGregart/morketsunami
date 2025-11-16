@@ -40,3 +40,77 @@
 .info-box:nth-of-type(2n) {
   background-color: var(--color-infobox-2-bg);
 }
+
+/* --- VARSEL: dråber vokser --- */
+.grow {
+  animation: growAnim 0.6s ease-out;
+}
+
+@keyframes growAnim {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.3);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* --- FLUGT: huset hopper --- */
+.jump {
+  animation: jumpAnim 0.6s ease;
+}
+
+@keyframes jumpAnim {
+  0% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-40px);
+  }
+  60% {
+    transform: translateY(5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ===== SIKKERHED: hele svg blinker ===== */
+.flash {
+  animation: flashWarn 0.4s linear;
+}
+
+@keyframes flashWarn {
+  0% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(2);
+  }
+  100% {
+    filter: brightness(1);
+  }
+}
+/* knapper - varsel, flugt, sikkerhed */
+
+.info-graphic button {
+  background-color: #10325a;
+  color: white;
+  font-size: 1rem;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 18px;
+  margin-right: 10px;
+  margin-top: 14px; /* <- lidt luft op til billedet */
+  cursor: pointer;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(17, 16, 80, 0.2);
+}
+
+/* Hover-effekt */
+.info-graphic button:hover {
+  background-color: #1f4b89;
+}
