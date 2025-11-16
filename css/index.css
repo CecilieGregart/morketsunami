@@ -1,0 +1,172 @@
+article[popover]::backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgb(0, 0, 0, 0.3);
+}
+
+[popover] {
+  max-height: 90vh;
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 0;
+}
+
+/* popoup boksen */
+.popover-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 25px;
+  margin-inline: auto; /* centrer vandret */
+  margin-top: 40px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.3);
+  max-width: 55ch;
+  cursor: pointer; /* "hånd" når du klikker */
+}
+
+/* billee i popup */
+.popover-card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+#pop01 p,
+#pop02 p,
+#pop03 p {
+  margin-block: 1rem; /* giver luft og og under hvert p */
+  line-height: 1.6; /* lidt mere læselinjerum */
+}
+
+.popover-card h3 {
+  color: #1f3b73;
+}
+
+.popover-card p {
+  line-height: 1.7; /* gør teksten mere læselig */
+  margin-block: 1.2rem; /* luft over/under hvert afsnit */
+}
+
+.popover-card p strong {
+  display: block; /* får <strong> til at ligne en mellemrubrik */
+  margin-bottom: 0.3rem; /* lille afstand mellem overskrift og tekst */
+  font-size: 1.05em; /* en smule større end normal tekst */
+  font-weight: 700;
+  color: #1f3b73;
+  letter-spacing: 0.02em;
+}
+
+details[open] div {
+  padding: 20px 0 0 0;
+}
+
+details[open] summary::after {
+  content: "X";
+}
+
+.cta_btn {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cta_btn:hover {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.news_card button {
+  border: none;
+  cursor: pointer; /* "hånd" når du klikker */
+}
+
+.news_card button:hover {
+  background-color: #183a7f;
+  color: white;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: #1f3b73;
+  color: white;
+  border: none;
+  font-size: 1rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  cursor: pointer; /* "hånd" når du klikker */
+}
+
+.close-btn:hover {
+  background: #1e60b6;
+}
+
+/* Teaser-opsætning */
+details.teaser {
+  margin-top: 1rem; /* giver luft */
+}
+
+/* "Knap"-udseende */
+summary.cta_btn {
+  display: flex;
+  justify-content: space-between; /* tekst venstre, pil højre */
+  align-items: center;
+  background-color: #10325a;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer; /* "hånd" når du klikker */
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+summary.cta_btn:hover {
+  background-color: #1f3b73;
+}
+
+/* Når man klikker på knappen */
+details[open] summary.cta_btn {
+  background-color: #10325a;
+}
+
+/* Teksten der folder ud */
+details.teaser p {
+  margin-top: 0.8rem;
+  line-height: 1.6;
+  color: #000000;
+}
+
+/* Pil til højre */
+summary.cta_btn::after {
+  content: "→"; /* pil når lukket */
+  transition: transform 0.3s ease;
+}
+
+/* Skift pil til kryds når åbnet */
+details[open] summary.cta_btn::after {
+  content: "✕"; /* luk-ikon */
+}
+
+#main-disclamer-content {
+  display: flex;
+  align-items: center;
+  gap: 15px; /* afstand mellem logo og tekst */
+}
+
+/* Logo-størrelse */
+#main-disclamer-content img {
+  width: 240px; /* gør logoet mindre */
+  height: auto;
+}
+
+/* Overskrift-udseende */
+#main-disclamer-content h1 {
+  font-size: 1.5rem; /* gør overskriften tydelig og stor */
+  font-weight: 700; /* gør fonten fed */
+}
+
+/* Underrubrik-udseende */
+#main-disclamer-content .sub {
+  font-size: 1rem;
+  margin-top: 5px; /* giver lidt luft over teksten */
+}

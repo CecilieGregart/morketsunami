@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/reset.css" />
+    <link rel="stylesheet" href="css/index.css" />
     <link rel="stylesheet" href="css/custom.css" />
     <link rel="stylesheet" href="css/fonts.css" />
     <link rel="stylesheet" href="css/general.css" />
@@ -18,7 +19,7 @@
     <header>
       <nav>
         <div id="logotype-wrapper" class="logo">
-          <a href="index.html"> LOGO-TYPE </a>
+          <a href="index.html"> MØRKETSUNAMI </a>
         </div>
         <ul class="menu">
           <li><a class="menuItem" href="instruction.html">Nærkontakt </a></li>
@@ -33,56 +34,97 @@
     </header>
     <section id="main-disclamer">
       <div id="main-disclamer-content">
-        <img src="warning" alt="ICON" />
+        <img src="logoforside.svg" alt="ICON" />
         <div>
-          <h1>OVERSKRIFT</h1>
-          <p class="sub">Underrubrik</p>
+          <h1>TSUNAMI INFORMATION</h1>
+          <p class="sub">
+            Få hurtig adgang til advarsler, retningslinjer og vigtig viden.
+          </p>
         </div>
       </div>
     </section>
     <main>
       <section id="daily">
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img
+            src="mørketsunamibillede2.svg"
+            alt="tegnet mørketsunamibillede "
+          />
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>Nærkontakt</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Lær hvordan du reagerer, når naturen pludselig vender sig. Denne
+              guide giver dig konkrete råd til, hvordan du handler hurtigt og
+              sikkert ved tegn på tsunami eller stormflod.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+
+            <details class="teaser">
+              <summary class="cta_btn">Læs mere</summary>
+              <p>
+                Hvis havet trækker sig hurtigt tilbage, er det et advarselstegn
+                på en kommende tsunami. Løb straks væk fra kysten og søg mod
+                højt terræn – hvert sekund tæller.
+              </p>
+              <p>
+                Hold øje med beredskabets varsler, og hjælp andre på din vej. En
+                hurtig reaktion kan redde liv, både dit eget og andres.
+              </p>
+            </details>
           </div>
         </article>
         <article class="daily_card">
-          <img src="" alt="teaser_img" />
+          <img src="teaser2.png" alt="Indberet billede" />
           <div class="daily_text">
-            <h2>Teaser</h2>
+            <h2>Indberet</h2>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat
-              magnam ducimus ea, sed minima asperiores.
+              Din observation kan gøre en forskel. Ved at rapportere ændringer i
+              vandstand eller usædvanlige bevægelser hjælper du beredskabet med
+              at handle hurtigere.
             </p>
-            <a href="" class="cta_btn">Se mere</a>
+
+            <details class="teaser">
+              <summary class="cta_btn">Læs mere</summary>
+              <p>
+                Udfyld indberetningsformularen med så præcise oplysninger som
+                muligt – tid, sted og hvad du har observeret. Det gør det
+                lettere for forskere og myndigheder at reagere hurtigt.
+              </p>
+              <p>
+                Hver melding tæller. Dine oplysninger kan hjælpe med at
+                forudsige nye bølger og beskytte liv langs kysterne.
+              </p>
+            </details>
           </div>
         </article>
       </section>
       <section id="breaking">
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Tsunamien indefra</h3>
+          <p>
+            Et kig under havets overflade afslører, hvordan en tsunami bliver
+            til lag for lag. Det starter som et næsten usynligt tryk i dybet,
+            men vokser til en kraft, der kan forandre alt på sin vej.
+          </p>
+          <img src="artikel1.png" alt="bølgelag under havet" />
+          <button popovertarget="pop01" class="cta_btn">Læs mere</button>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Naturen slår igen</h3>
+          <p>
+            Når naturen rammer tilbage, minder den os om, hvor små vi egentlig
+            er.
+          </p>
+          <img src="artikel2.png" alt="tsunamistorm" />
+          <button popovertarget="pop02" class="cta_btn">Læs mere</button>
         </article>
         <article class="news_card">
-          <h3>Nyhed</h3>
-          <p>Lorem ipsum dolor sit, sed minima asperiores.</p>
-          <img src="" alt="news_img" />
-          <a class="cta_btn" href="">Læs mere</a>
+          <h3>Videnskaben i stormens skygge</h3>
+          <p>
+            Mens naturen viser sin magt, står forskerne klar med sensorer, data
+            og mod.
+          </p>
+          <img src="artikel3.png" alt="forskning" />
+          <button popovertarget="pop03" class="cta_btn">Læs mere</button>
         </article>
       </section>
     </main>
@@ -113,6 +155,141 @@
         </ul>
       </nav>
     </footer>
+
+    <article popover id="pop01" class="popover-card">
+      <button
+        popovertarget="pop01"
+        popovertargetaction="hide"
+        class="close-btn"
+      >
+        ✕
+      </button>
+      <h3>Tsunamien indefra</h3>
+      <img src="artikel1.png" alt="bølgelag" />
+      <p>
+        <strong>Hvor katastrofen starter</strong>
+        Dybt under havoverfladen, hvor jordens plader mødes, kan et enkelt ryk
+        frigive en enorm mængde energi. Det, der starter som et næsten usynligt
+        skub i dybet, sætter vandmasser i bevægelse med ufattelig hast.
+        Tsunamien fødes i stilhed – et tryk, der bevæger sig gennem oceanet
+        hurtigere end et passagerfly.
+      </p>
+
+      <p>
+        <strong>Fra ro til rejst mur</strong>
+        Ude på åbent hav mærker skibe sjældent noget. Men efterhånden som bølgen
+        nærmer sig lavere vand, tvinges den opad. Den vokser, samler energi og
+        forvandler sig fra en krusning til en mur af vand. Hver centimeter af
+        havbunden, den rammer, forstærker dens kraft og form. Naturens fysiske
+        præcision bliver pludselig synlig – og skræmmende.
+      </p>
+
+      <p>
+        <strong>Lagene i bevægelse</strong>
+        En tsunami består af flere lag, som bevæger sig med forskellig
+        hastighed. Vandet presser sig frem i rytmer, der minder om hjerteslag.
+        Set ovenfra ligner det kaos – men i virkeligheden er det perfekt
+        matematik. Bølgens styrke handler ikke om højden alene, men om dens
+        dybde og energi.
+      </p>
+
+      <p>
+        <strong>Forståelsen som forsvar</strong>
+        Hver gang forskere måler, simulerer og kortlægger disse bevægelser,
+        bliver vi bedre til at varsle i tide. Viden kan ikke stoppe havet – men
+        den kan redde liv. Jo mere vi forstår mekanikken bag, desto mere kontrol
+        får vi i mødet med naturens uforudsigelige kræfter.
+      </p>
+    </article>
+    <article popover id="pop02" class="popover-card">
+      <button
+        popovertarget="pop02"
+        popovertargetaction="hide"
+        class="close-btn"
+      >
+        ✕
+      </button>
+      <h3>Naturen slår igen</h3>
+      <img src="artikel2.png" alt="tsunamistorm" />
+
+      <p>
+        <strong>Stilheden før slaget</strong>
+        Et øjebliks ro – havet trækker sig tilbage, fuglene forsvinder, og alt
+        bliver stille. For de få, der står på stranden, føles det som et
+        underligt åndedrag, inden naturen slår igen. Det er i denne stilhed, de
+        fleste forstår, at noget er galt. Vandet forsvinder, men kraften samler
+        sig.
+      </p>
+
+      <p>
+        <strong>Kampen mod naturens tempo</strong>
+        Når bølgen rejser sig i horisonten, er der ingen forskel på rig og
+        fattig, stærk eller svag. Alle reagerer på instinkt. Nogle løber, andre
+        fryser. Bølgens styrke kan ikke stoppes, men dens hastighed kan beregnes
+        – og det er dér, forskellen mellem liv og død findes.
+      </p>
+
+      <p>
+        <strong>Overlevelse og erkendelse</strong>
+        Når naturen viser sin magt, bliver menneskets teknologi lille. Vi søger
+        mod højder, improviserer og hjælper hinanden. Midt i kaos opstår
+        øjeblikke af mod og medmenneskelighed, hvor samarbejde er det eneste
+        værn mod vandets kræfter.
+      </p>
+
+      <p>
+        <strong>Efter bølgen</strong>
+        Når vandet trækker sig tilbage, efterlader det mere end ødelæggelse. Det
+        efterlader forståelse. Landskabet ændres, men også vores syn på naturen.
+        Tsunamien minder os om, at vi ikke lever over naturen – men i den. Det
+        er mørkets æstetik: ødelæggelse, der skaber respekt.
+      </p>
+    </article>
+    <article popover id="pop03" class="popover-card">
+      <button
+        popovertarget="pop03"
+        popovertargetaction="hide"
+        class="close-btn"
+      >
+        ✕
+      </button>
+      <h3>Videnskaben i stormens skygge</h3>
+      <img src="artikel3.png" alt="forskning" />
+
+      <p>
+        <strong>Data der redder liv</strong>
+        Langs verdens kyster måler sensorer konstant havets bevægelser. Små
+        udsving i tryk, strøm og temperatur registreres i realtid. Disse data
+        danner grundlaget for al tidlig varsling – og hvert sekund tæller. Et
+        varsel udsendt i tide kan redde tusinder.
+      </p>
+
+      <p>
+        <strong>Mennesker bag tallene</strong>
+        Bag hver graf og hver rapport står forskere, som arbejder under ekstreme
+        forhold. De installerer udstyr i stormvejr, sender droner ud over havet
+        og holder øje med skærme nat og dag. De står bogstaveligt talt i
+        stormens skygge – hvor viden og natur mødes.
+      </p>
+
+      <p>
+        <strong>Teknologien som allieret</strong>
+        Satellitter, undervandsdroner og seismiske sensorer gør det muligt at
+        spore bevægelser på få millimeter. Samarbejde mellem lande og
+        organisationer sikrer, at data deles hurtigt. Videnskaben er blevet
+        vores øjne i mørket – et globalt net af observationer, der konstant
+        lærer nyt.
+      </p>
+
+      <p>
+        <strong>At lære af fortiden</strong>
+        Efter hver tsunami samles erfaringerne: data, vidnesbyrd og reaktioner.
+        Fejl bliver analyseret, systemer forbedres, og nye standarder skabes.
+        Videnskaben forsøger ikke at kontrollere naturen – men at forstå den. Og
+        netop dér ligger håbet.
+      </p>
+    </article>
+
     <script src="js/burger.js"></script>
     <!-- <script src="js/main.js"></script> -->
   </body>

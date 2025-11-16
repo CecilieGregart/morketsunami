@@ -52,7 +52,7 @@
   margin: 0 0 1rem 0;
 }
 .news_card:first-child:before {
-  content: "BREAKING NEWS";
+  content: "AKTUEL VIDEN";
   background-color: var(--color-headline-bg);
   color: var(--color-headline-text-page);
   font-size: var(--font-h3-size);
