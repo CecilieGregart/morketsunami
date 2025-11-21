@@ -67,3 +67,74 @@
   --color-infobox-1-bg: #3880ad;
   --color-infobox-2-bg: #def5db;
 }
+/* Farver til light og dark mode */
+:root {
+  /* Page baggrund */
+  --color-bg: light-dark(#3880ad, #464c54); /* lys blå / grå */
+
+  /* Header */
+  --color-head-bg: light-dark(#182d63, #111827);
+
+  /* Logotype */
+  --color-logotype-bg: light-dark(#000000, #000000);
+  --color-text-logotype: light-dark(#000000, #e5e7ff);
+
+  /* Global menu / top-menu */
+  --color-menu-bg: light-dark(#0f2c47, #0f2c47);
+  --color-link-bg: light-dark(#d9e3ff, #4b5563);
+  --color-link-hover: light-dark(#ffffff, #e5e7eb);
+  --color-link-active: light-dark(#99958f, #1e0863);
+
+  /* Headlines og rubrik */
+  --color-headline-bg: light-dark(#000000, #000000);
+  --color-headline-text-page: light-dark(#d9e3ff, #e5e7ff);
+
+  /* Brødtekst */
+  --color-text: light-dark(#000000, #ffffff);
+  --color-text-inverted: light-dark(#d9e3ff, #d9e3ff);
+
+  /* Cards (venstre teasere) */
+  --color-card-bg: light-dark(#194a75, #3d3d3c);
+  --color-cta-card-bg: light-dark(#182d63, #1b456c);
+
+  /* News-cards (højre kolonne) */
+  --color-news-bg: light-dark(#334c8c, #494949);
+  --color-news-bg-inverted: light-dark(#d9e3ff, #2c2b29);
+  --color-cta-newscard-bg: light-dark(#707070, #2a2921);
+  --color-cta-newscard-bg-inverted: light-dark(#1b456c, #3f4860);
+
+  /* Infographics (instruction-siden) */
+  --color-info-bg: light-dark(#194a75, #343434);
+  --color-infobox-1-bg: light-dark(#3880ad, #122743);
+  --color-infobox-2-bg: light-dark(#def5db, #064e3b);
+}
+
+/* ---------- CARDS VENSTRE (daily_card) ---------- */
+.daily_card {
+  background-color: var(--color-card-bg); /* som før */
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* ---------- HØJRE KOLONNE (breaking + news_card) ---------- */
+
+/* Selve kolonnen skal IKKE have en stor baggrund */
+#breaking {
+  background: none; /* ingen lang plade */
+  padding: 0;
+}
+
+/* Hvert nyhedskort er en separat boks */
+.news_card {
+  background-color: var(--color-news-bg); /* farve til boksen */
+  border-radius: 2px;
+  padding: 1rem;
+  margin-bottom: 1rem; /* afstand mellem de 3 bokse */
+}
+
+/* Billedet skal fylde hele kortets bredde */
+.news_card img {
+  width: 100%;
+  display: block;
+}
