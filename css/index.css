@@ -56,6 +56,20 @@ article[popover]::backdrop {
   letter-spacing: 0.02em;
 }
 
+/* ---------- DARK MODE: popover ---------- */
+html.dark .popover-card {
+  background-color: #111827; /* mørk baggrund til boksen */
+  color: #f9fafb; /* lys standardtekst */
+}
+
+html.dark .popover-card h3 {
+  color: #f9fafb; /* overskrift også lys */
+}
+
+html.dark .popover-card p {
+  color: #f9fafb; /* sikre at brødteksten bliver lys */
+}
+
 details[open] div {
   padding: 20px 0 0 0;
 }
@@ -134,6 +148,14 @@ details.teaser p {
   margin-top: 0.8rem;
   line-height: 1.6;
   color: #000000;
+}
+/* ---------- DARK MODE: teaser-tekst ---------- */
+html.dark details.teaser p {
+  color: #ffffff; /* hvid tekst i dark mode */
+}
+
+html.dark details.teaser p strong {
+  color: #ffffff;
 }
 
 /* Pil til højre */
