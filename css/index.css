@@ -149,7 +149,7 @@ details.teaser p {
   line-height: 1.6;
   color: #000000;
 }
-/* ---------- DARK MODE: teaser-tekst ---------- */
+
 html.dark details.teaser p {
   color: #ffffff; /* hvid tekst i dark mode */
 }
